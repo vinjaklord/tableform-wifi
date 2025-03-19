@@ -1,0 +1,145 @@
+/* General container styling */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+/* Add this to Page.css */
+.data-table .edit-input,
+.data-table .edit-select {
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box; /* Ensure width includes padding */
+}
+
+/* Table styling */
+.data-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.data-table th,
+.data-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.data-table th {
+  background-color: #4a90e2;
+  color: white;
+  font-weight: 600;
+}
+
+.data-table td {
+  background-color: #fff;
+}
+
+.data-table tr:nth-child(even) td {
+  background-color: #f9f9f9;
+}
+
+.data-table tr:hover td {
+  background-color: #f1f5f9;
+  transition: background-color 0.3s ease;
+}
+
+/* Form styling */
+.form-container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+  margin-top: 0;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.form-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.form-row label {
+  width: 80px;
+  font-weight: 500;
+  color: #555;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+  max-width: 250px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-row input:focus,
+.form-row select:focus {
+  border-color: #4a90e2;
+  outline: none;
+}
+
+.submit-button {
+  display: block;
+  width: 150px;
+  padding: 10px;
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #357abd;
+}
+
+/* Loading and error states */
+.loading,
+.error {
+  text-align: center;
+  padding: 20px;
+  color: #555;
+}
+
+.error {
+  color: #d9534f;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .form-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .form-row label {
+    margin-bottom: 5px;
+  }
+
+  .form-row input,
+  .form-row select {
+    width: 100%;
+    max-width: none;
+  }
+
+  .submit-button {
+    width: 100%;
+  }
+}
